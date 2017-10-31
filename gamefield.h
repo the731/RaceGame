@@ -19,13 +19,13 @@ public:
 
 
 private:
-    static GameField * p_instance;
+    static GameField * instance_;
 
     GameField();
     GameField( const GameField& );
     GameField& operator=( GameField& );
 
-    char field[FIELD_LENGHT][FIELD_WIDTH];
+    char field_[FIELD_LENGHT][FIELD_WIDTH];
 };
 
 #endif // GAMEFIELD_H

@@ -20,9 +20,9 @@ public:
     virtual ~Car();
 
 private:
-    int xPosition;
-    int yPosition;
-    int itemType;
+    int xPosition_;
+    int yPosition_;
+    int itemType_;
 };
 
 #endif // CAR_H

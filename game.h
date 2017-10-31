@@ -22,10 +22,10 @@ public:
 
 private:
 
-    bool isGameOver;
-    IGameItem* car;
-    IGameItem* barrier;
-    int gameSpeed;
+    bool isGameOver_;
+    IGameItem* car_;
+    IGameItem* barrier_;
+    int gameSpeed_;
 
     void clearScreen();
     void collapseCheck();

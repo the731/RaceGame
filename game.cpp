@@ -5,25 +5,25 @@
 #include <ctime>
 
 Game::Game():
-            isGameOver(false)
-          , gameSpeed(DEFAULT_GAME_SPEED)
+            isGameOver_(false)
+          , gameSpeed_(DEFAULT_GAME_SPEED)
 {
-    car = new Car();
-    barrier = new RegularBarrier();
+    car_ = new Car();
+    barrier_ = new RegularBarrier();
 }
 
 void Game::start()
 {
-    while(!isGameOver)
+    while(!isGameOver_)
     {
         changeBarrierPosition();
         changeCarPosition();
         GameField::getInstance()->refreshField();
-        GameField::getInstance()->setCarPosition(car);
-        GameField::getInstance()->setBarrierPosition(barrier);
+        GameField::getInstance()->setCarPosition(car_);
+        GameField::getInstance()->setBarrierPosition(barrier_);
         GameField::getInstance()->draw();
         collapseCheck();
-        Sleep(gameSpeed);
+        Sleep(gameSpeed_);
         clearScreen();
     }
 }
@@ -35,51 +35,51 @@ while (_kbhit())
     switch (_getch())
     {
     case INCREASE_SPEED:
-        if(gameSpeed <= MAXIMUM_GAME_SPEED)
+        if(gameSpeed_ <= MAXIMUM_GAME_SPEED)
         {
             break;
         }
         else
         {
-            gameSpeed -= SPEED_CHANGE_STEP;
+            gameSpeed_ -= SPEED_CHANGE_STEP;
             break;
         }
 
     case DECREASE_SPEED:
-        if(gameSpeed >= MINIMUM_GAME_SPEED)
+        if(gameSpeed_ >= MINIMUM_GAME_SPEED)
         {
             break;
         }
         else
         {
-            gameSpeed += SPEED_CHANGE_STEP;
+            gameSpeed_ += SPEED_CHANGE_STEP;
             break;
         }
 
     case MOVE_CAR_LEFT:
-        if(car->getYPosition() - ONE_STEP <= BEGIN_INDEX)
+        if(car_->getYPosition() - ONE_STEP <= BEGIN_INDEX)
         {
             break;
         }
         else
         {
-            car->setPosition(car->getXPosition(), car->getYPosition() - ONE_STEP);
+            car_->setPosition(car_->getXPosition(), car_->getYPosition() - ONE_STEP);
             break;
         }
 
     case MOVE_CAR_RIGHT:
-        if(car->getYPosition() + ONE_STEP >= END_INDEX)
+        if(car_->getYPosition() + ONE_STEP >= END_INDEX)
         {
             break;
         }
         else
         {
-            car->setPosition(car->getXPosition(), car->getYPosition() + ONE_STEP);
+            car_->setPosition(car_->getXPosition(), car_->getYPosition() + ONE_STEP);
             break;
         }
 
     case SET_GAME_OVER:
-            isGameOver = true;
+            isGameOver_ = true;
             break;
         }
     }
@@ -87,17 +87,17 @@ while (_kbhit())
 
 void Game::changeBarrierPosition()
 {
-    if(barrier->getXPosition() + ONE_STEP > END_INDEX)
+    if(barrier_->getXPosition() + ONE_STEP > END_INDEX)
     {
-        barrier->setPosition(ONE_STEP, barrier->getYPosition() + ONE_STEP);
+        barrier_->setPosition(ONE_STEP, barrier_->getYPosition() + ONE_STEP);
     }
-    barrier->setPosition(barrier->getXPosition() + ONE_STEP, barrier->getYPosition());
+    barrier_->setPosition(barrier_->getXPosition() + ONE_STEP, barrier_->getYPosition());
 }
 
 Game::~Game()
 {
-    delete car;
-    delete barrier;
+    delete car_;
+    delete barrier_;
 }
 
 void Game::clearScreen()
@@ -112,11 +112,11 @@ void Game::clearScreen()
 
 void Game::collapseCheck()
 {
-    for(int  i = BEGIN_INDEX; i < barrier->getType(); i++)
+    for(int  i = BEGIN_INDEX; i < barrier_->getType(); i++)
     {
-        if(car->getXPosition() == barrier->getXPosition() && car->getYPosition() == barrier->getYPosition() + i)
+        if(car_->getXPosition() == barrier_->getXPosition() && car_->getYPosition() == barrier_->getYPosition() + i)
         {
-            isGameOver = true;
+            isGameOver_ = true;
         }
     }
 }

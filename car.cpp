@@ -2,37 +2,37 @@
 
 
 Car::Car():
-    xPosition(CAR_DEFAULT_POSITION_X)
-   ,yPosition(CAR_DEFAULT_POSITION_Y)
-   ,itemType(TYPE_CAR)
+    xPosition_(CAR_DEFAULT_POSITION_X)
+   ,yPosition_(CAR_DEFAULT_POSITION_Y)
+   ,itemType_(TYPE_CAR)
 {
 
 }
 
 int Car::getXPosition() const
 {
-    return xPosition;
+    return xPosition_;
 }
 
 void Car::setPosition(int x, int y)
 {
-    xPosition = x;
-    yPosition = y;
+    xPosition_ = x;
+    yPosition_ = y;
 }
 
 void Car::setType(int type)
 {
-    itemType = type;
+    itemType_ = type;
 }
 
 int Car::getYPosition() const
 {
-    return yPosition;
+    return yPosition_;
 }
 
 int Car::getType() const
 {
-    return itemType;
+    return itemType_;
 }
 
 Car::~Car()
