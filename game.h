@@ -25,8 +25,10 @@ private:
     bool isGameOver;
     IGameItem* car;
     IGameItem* barrier;
+    int gameSpeed;
 
     void clearScreen();
+    void collapseCheck();
 
 };
 

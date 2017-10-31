@@ -10,10 +10,22 @@ namespace RaceGameConstants
     const int END_INDEX = 19;
     const int ONE_STEP = 1;
     const char NEXT_LINE = '\n';
-
     const char SIDE_FANCE = '*';
     const char EMPTY_POINT = ' ';
     const int DEFAULT_GAME_SPEED = 100;
+    const int MINIMUM_GAME_SPEED = 1000;
+    const int MAXIMUM_GAME_SPEED = 10;
+    const int SPEED_CHANGE_STEP = 10;
+
+    const int WITHOUT_FANCE_BEGIN_INDEX = 1;
+    const int WITHOUT_FANCE_END_INDEX = 18;
+
+    //_______________ CONTROLLER ______________________
+    const char INCREASE_SPEED = 'w';
+    const char DECREASE_SPEED = 's';
+    const char MOVE_CAR_LEFT = 'a';
+    const char MOVE_CAR_RIGHT = 'd';
+    const char SET_GAME_OVER = 'o';
 
     //_______________ REGULAR CAR _____________________
     const int TYPE_CAR = 100;

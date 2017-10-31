@@ -6,6 +6,7 @@
 
 Game::Game():
             isGameOver(false)
+          , gameSpeed(DEFAULT_GAME_SPEED)
 {
     car = new Car();
     barrier = new RegularBarrier();
@@ -21,7 +22,8 @@ void Game::start()
         GameField::getInstance()->setCarPosition(car);
         GameField::getInstance()->setBarrierPosition(barrier);
         GameField::getInstance()->draw();
-        Sleep(DEFAULT_GAME_SPEED);
+        collapseCheck();
+        Sleep(gameSpeed);
         clearScreen();
     }
 }
@@ -32,29 +34,29 @@ while (_kbhit())
 {
     switch (_getch())
     {
-    case 'w':
-        if(car->getXPosition() - ONE_STEP <= BEGIN_INDEX)
+    case INCREASE_SPEED:
+        if(gameSpeed <= MAXIMUM_GAME_SPEED)
         {
             break;
         }
         else
         {
-            car->setPosition(car->getXPosition() - ONE_STEP, car->getYPosition());
+            gameSpeed -= SPEED_CHANGE_STEP;
             break;
         }
 
-    case 's':
-        if(car->getXPosition() + ONE_STEP >= END_INDEX)
+    case DECREASE_SPEED:
+        if(gameSpeed >= MINIMUM_GAME_SPEED)
         {
             break;
         }
         else
         {
-            car->setPosition(car->getXPosition() + ONE_STEP , car->getYPosition());
+            gameSpeed += SPEED_CHANGE_STEP;
             break;
         }
 
-    case 'a':
+    case MOVE_CAR_LEFT:
         if(car->getYPosition() - ONE_STEP <= BEGIN_INDEX)
         {
             break;
@@ -65,7 +67,7 @@ while (_kbhit())
             break;
         }
 
-    case 'd':
+    case MOVE_CAR_RIGHT:
         if(car->getYPosition() + ONE_STEP >= END_INDEX)
         {
             break;
@@ -76,7 +78,7 @@ while (_kbhit())
             break;
         }
 
-    case 'o':
+    case SET_GAME_OVER:
             isGameOver = true;
             break;
         }
@@ -106,4 +108,15 @@ void Game::clearScreen()
     Position.X = 0;
     Position.Y = 0;
     SetConsoleCursorPosition(hOut, Position);
+}
+
+void Game::collapseCheck()
+{
+    for(int  i = BEGIN_INDEX; i < barrier->getType(); i++)
+    {
+        if(car->getXPosition() == barrier->getXPosition() && car->getYPosition() == barrier->getYPosition() + i)
+        {
+            isGameOver = true;
+        }
+    }
 }
