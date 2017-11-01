@@ -1971,26 +1971,26 @@
 <XPD:REF name="BehavioralFeature">fVil+Ehb7UmSLlVPN8+4RwAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
-<XPD:OBJ name="Operations[5]" type="UMLOperation" guid="TQN1TjBcRUOs36DUb8hZKQAA">
+<XPD:OBJ name="Operations[5]" type="UMLOperation" guid="u4KQDtsS1kuBhRrnsvCIswAA">
 <XPD:ATTR name="Name" type="string">getInstance</XPD:ATTR>
 <XPD:REF name="Owner">8szW74z9ykO9WfnVnWkeHAAA</XPD:REF>
 <XPD:ATTR name="#Parameters" type="integer">1</XPD:ATTR>
-<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="rPWCrTcDv0KagqVscRMlxgAA">
+<XPD:OBJ name="Parameters[0]" type="UMLParameter" guid="wpXoVVz2N0Sse91rN6g7QwAA">
 <XPD:ATTR name="DirectionKind" type="UMLParameterDirectionKind">pdkReturn</XPD:ATTR>
-<XPD:REF name="BehavioralFeature">TQN1TjBcRUOs36DUb8hZKQAA</XPD:REF>
+<XPD:REF name="BehavioralFeature">u4KQDtsS1kuBhRrnsvCIswAA</XPD:REF>
 <XPD:REF name="Type_">8szW74z9ykO9WfnVnWkeHAAA</XPD:REF>
 </XPD:OBJ>
 </XPD:OBJ>
 <XPD:ATTR name="#TypedParameters" type="integer">1</XPD:ATTR>
-<XPD:REF name="TypedParameters[0]">rPWCrTcDv0KagqVscRMlxgAA</XPD:REF>
+<XPD:REF name="TypedParameters[0]">wpXoVVz2N0Sse91rN6g7QwAA</XPD:REF>
 <XPD:ATTR name="#Associations" type="integer">2</XPD:ATTR>
 <XPD:REF name="Associations[0]">BUaZSk/eRUy2WSrkFpNshQAA</XPD:REF>
 <XPD:REF name="Associations[1]">4vaqu+bdhU+qMWN5QymUxAAA</XPD:REF>
 <XPD:ATTR name="#Attributes" type="integer">2</XPD:ATTR>
 <XPD:OBJ name="Attributes[0]" type="UMLAttribute" guid="1Fr6FIVvgUWq3W4bG2bWNgAA">
-<XPD:ATTR name="Name" type="string">static p_instance_</XPD:ATTR>
+<XPD:ATTR name="Name" type="string">static instance_</XPD:ATTR>
 <XPD:ATTR name="Visibility" type="UMLVisibilityKind">vkPrivate</XPD:ATTR>
-<XPD:ATTR name="TypeExpression" type="string">GameField*</XPD:ATTR>
+<XPD:ATTR name="TypeExpression" type="string">GameField&amp;</XPD:ATTR>
 <XPD:REF name="Owner">8szW74z9ykO9WfnVnWkeHAAA</XPD:REF>
 </XPD:OBJ>
 <XPD:OBJ name="Attributes[1]" type="UMLAttribute" guid="Ycks0unraEiRkWLdyBDrRwAA">

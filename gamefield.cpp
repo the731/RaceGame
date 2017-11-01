@@ -1,7 +1,6 @@
 #include "gamefield.h"
 #include<iostream>
 
-GameField* GameField::instance_ = 0;
 
 GameField::GameField()
 {
@@ -26,10 +25,9 @@ void GameField::refreshField()
     }
 }
 
-GameField* GameField::getInstance()
+GameField& GameField::getInstance()
 {
-    if(!instance_)
-        instance_ = new GameField();
+    static GameField instance_;
     return instance_;
 }
 

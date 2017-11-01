@@ -9,7 +9,7 @@ using namespace RaceGameConstants;
 class GameField
 {
 public:
-    static GameField * getInstance();
+    static GameField& getInstance();
 
     void draw();
     void setCarPosition(const IGameItem* car);
@@ -19,7 +19,6 @@ public:
 
 
 private:
-    static GameField * instance_;
 
     GameField();
     GameField( const GameField& );

@@ -18,10 +18,10 @@ void Game::start()
     {
         changeBarrierPosition();
         changeCarPosition();
-        GameField::getInstance()->refreshField();
-        GameField::getInstance()->setCarPosition(car_);
-        GameField::getInstance()->setBarrierPosition(barrier_);
-        GameField::getInstance()->draw();
+        GameField::getInstance().refreshField();
+        GameField::getInstance().setCarPosition(car_);
+        GameField::getInstance().setBarrierPosition(barrier_);
+        GameField::getInstance().draw();
         collapseCheck();
         Sleep(gameSpeed_);
         clearScreen();
