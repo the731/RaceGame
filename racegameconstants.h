@@ -9,6 +9,12 @@ namespace RaceGameConstants
     const int BEGIN_INDEX = 0;
     const int END_INDEX = 19;
     const int ONE_STEP = 1;
+    const int TWO_STEP = 2;
+    const int THREE_STEP = 3;
+    const int FOUR_STEP = 4;
+    const int FIVE_STEP = 5;
+    const int SIX_STEP = 6;
+    const int SEVEN_STEP = 7;
     const char NEXT_LINE = '\n';
     const char SIDE_FANCE = '*';
     const char EMPTY_POINT = ' ';
@@ -46,6 +52,9 @@ namespace RaceGameConstants
 
     //_______________ LONG BARRIER _________________
     const int TYPE_LONG_BARRIER = 8;
+
+    //_____ FOR RANDOM BARRIER COLLECTION _____________
+
 
 }
 #endif // RACEGAMECONSTANTS_H

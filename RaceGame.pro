@@ -20,7 +20,8 @@ SOURCES += main.cpp \
     longbarrier.cpp \
     regularbarriercreator.cpp \
     doublebarriercreator.cpp \
-    longbarriercreator.cpp
+    longbarriercreator.cpp \
+    barriercollection.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -45,4 +46,5 @@ HEADERS += \
     longbarrier.h \
     regularbarriercreator.h \
     doublebarriercreator.h \
-    longbarriercreator.h
+    longbarriercreator.h \
+    barriercollection.h

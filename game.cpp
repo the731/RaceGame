@@ -9,7 +9,7 @@ Game::Game():
           , gameSpeed_(DEFAULT_GAME_SPEED)
 {
     car_ = new Car();
-    barrier_ = new RegularBarrier();
+    barrier_ = barrierCollection_.getRandomBarrier();
 }
 
 void Game::start()
@@ -89,6 +89,7 @@ void Game::changeBarrierPosition()
 {
     if(barrier_->getXPosition() + ONE_STEP > END_INDEX)
     {
+        setBarrier(barrierCollection_.getRandomBarrier());
         barrier_->setPosition(ONE_STEP, barrier_->getYPosition() + ONE_STEP);
     }
     barrier_->setPosition(barrier_->getXPosition() + ONE_STEP, barrier_->getYPosition());
@@ -97,7 +98,12 @@ void Game::changeBarrierPosition()
 Game::~Game()
 {
     delete car_;
-    delete barrier_;
+    //delete barrier_;
+}
+
+void Game::setBarrier(IGameItem* barrier)
+{
+    barrier_ = barrier;
 }
 
 void Game::clearScreen()

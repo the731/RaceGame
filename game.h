@@ -4,6 +4,7 @@
 #include "gamefield.h"
 #include "car.h"
 #include "regularbarrier.h"
+#include "barriercollection.h"
 
 #include "racegameconstants.h"
 
@@ -26,9 +27,11 @@ private:
     IGameItem* car_;
     IGameItem* barrier_;
     int gameSpeed_;
+    BarrierCollection barrierCollection_;
 
     void clearScreen();
     void collapseCheck();
+    void setBarrier(IGameItem *barrier);
 
 };
 

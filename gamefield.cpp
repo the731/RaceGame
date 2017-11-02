@@ -65,6 +65,23 @@ void GameField::setBarrierPosition(const IGameItem* barrier)
     field_[barrier->getXPosition()][barrier->getYPosition() + ONE_STEP] = BARRIER_GRAPHICS;
     break;
 
-    //TODO: implement different types of barrier
+    case TYPE_DOUBLE_BARRIER :
+    field_[barrier->getXPosition()][barrier->getYPosition()] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + ONE_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + TWO_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + THREE_STEP] = BARRIER_GRAPHICS;
+    break;
+
+    case TYPE_LONG_BARRIER :
+    field_[barrier->getXPosition()][barrier->getYPosition()] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + ONE_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + TWO_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + THREE_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + FOUR_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + FIVE_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + SIX_STEP] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + SEVEN_STEP] = BARRIER_GRAPHICS;
+    break;
+
     }
 }
