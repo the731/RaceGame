@@ -1,8 +1,16 @@
 #include "regularbarrier.h"
 
 RegularBarrier::RegularBarrier():
-    xPosition_(REGULAR_BARRIER_DEFAULT_POSITION_X)
-   ,yPosition_(REGULAR_BARRIER_DEFAULT_POSITION_Y)
+    xPosition_(BARRIER_DEFAULT_POSITION_X)
+   ,yPosition_(BARRIER_DEFAULT_POSITION_Y)
+   ,itemType_(TYPE_REGULAR_BARRIER)
+{
+
+}
+
+RegularBarrier::RegularBarrier(int startPosition):
+    xPosition_(startPosition)
+   ,yPosition_(BARRIER_DEFAULT_POSITION_Y)
    ,itemType_(TYPE_REGULAR_BARRIER)
 {
 

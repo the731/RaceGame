@@ -10,6 +10,7 @@ class RegularBarrier : public IGameItem
 {
 public:
     RegularBarrier();
+    RegularBarrier(int startPosition);
 
     virtual int getXPosition() const;
     virtual int getYPosition() const;

@@ -14,7 +14,13 @@ SOURCES += main.cpp \
     igameitem.cpp \
     car.cpp \
     regularbarrier.cpp \
-    game.cpp
+    game.cpp \
+    igameitemcreator.cpp \
+    doublebarrier.cpp \
+    longbarrier.cpp \
+    regularbarriercreator.cpp \
+    doublebarriercreator.cpp \
+    longbarriercreator.cpp
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked deprecated (the exact warnings
@@ -33,4 +39,10 @@ HEADERS += \
     igameitem.h \
     car.h \
     regularbarrier.h \
-    game.h
+    game.h \
+    igameitemcreator.h \
+    doublebarrier.h \
+    longbarrier.h \
+    regularbarriercreator.h \
+    doublebarriercreator.h \
+    longbarriercreator.h

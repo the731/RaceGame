@@ -33,10 +33,19 @@ namespace RaceGameConstants
     const int CAR_DEFAULT_POSITION_Y = 10;
     const char TYPE_CAR_GRAPHICS = '^';
 
+    //___________________ BARRIER _____________________
+    const char BARRIER_GRAPHICS = '=';
+    const int BARRIER_DEFAULT_POSITION_X = 0;
+    const int BARRIER_DEFAULT_POSITION_Y = 10;
+
     //_______________ REGULAR BARRIER _________________
     const int TYPE_REGULAR_BARRIER = 2;
-    const int REGULAR_BARRIER_DEFAULT_POSITION_X = 0;
-    const int REGULAR_BARRIER_DEFAULT_POSITION_Y = 10;
-    const char REG_BARRIER_GRAPHICS = '=';
+
+    //_______________ DOUBLE BARRIER _________________
+    const int TYPE_DOUBLE_BARRIER = 4;
+
+    //_______________ LONG BARRIER _________________
+    const int TYPE_LONG_BARRIER = 8;
+
 }
 #endif // RACEGAMECONSTANTS_H

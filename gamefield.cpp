@@ -61,8 +61,8 @@ void GameField::setBarrierPosition(const IGameItem* barrier)
     switch (barrier->getType())
     {
     case TYPE_REGULAR_BARRIER :
-    field_[barrier->getXPosition()][barrier->getYPosition()] = REG_BARRIER_GRAPHICS;
-    field_[barrier->getXPosition()][barrier->getYPosition() + ONE_STEP] = REG_BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition()] = BARRIER_GRAPHICS;
+    field_[barrier->getXPosition()][barrier->getYPosition() + ONE_STEP] = BARRIER_GRAPHICS;
     break;
 
     //TODO: implement different types of barrier
