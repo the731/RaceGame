@@ -31,9 +31,9 @@ private:
 
     std::vector<IGameItem*> barriers_;
 
-    RegularBarrierCreator* regularBarrierCreator_;
-    DoubleBarrierCreator* doubleBarrierCreator_;
-    LongBarrierCreator* longBarrierCreator_;
+    IGameItemCreator* regularBarrierCreator_;
+    IGameItemCreator* doubleBarrierCreator_;
+    IGameItemCreator* longBarrierCreator_;
 
 };
 
