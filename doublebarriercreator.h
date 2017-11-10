@@ -1,8 +1,8 @@
 #ifndef DOUBLEBARRIERCREATOR_H
 #define DOUBLEBARRIERCREATOR_H
 
-#include"igameitemcreator.h"
-#include"doublebarrier.h"
+#include "igameitemcreator.h"
+#include "doublebarrier.h"
 
 class DoubleBarrierCreator : public IGameItemCreator
 {

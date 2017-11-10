@@ -12,7 +12,9 @@
 #include "regularbarrier.h"
 #include "doublebarrier.h"
 #include "longbarrier.h"
-#include"racegameconstants.h"
+#include "racegameconstants.h"
+#include "carcreator.h"
+#include "car.h"
 
 using namespace RaceGameConstants;
 
@@ -22,6 +24,7 @@ public:
     BarrierCollection();
 
     IGameItem* getRandomBarrier();
+    IGameItem* getCar();
 
     ~BarrierCollection();
 
@@ -34,6 +37,8 @@ private:
     IGameItemCreator* regularBarrierCreator_;
     IGameItemCreator* doubleBarrierCreator_;
     IGameItemCreator* longBarrierCreator_;
+    IGameItemCreator* carCreator_;
+    IGameItem* car_;
 
 };
 
